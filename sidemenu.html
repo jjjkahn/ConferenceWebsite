@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+          font-family: "Lato", sans-serif;
+        }
+        
+        .sidebar {
+          height: 100%;
+          width: 0;
+          position: fixed;
+          z-index: 1;
+          top: 0;
+          left: 0;
+          background-color: #111;
+          overflow-x: hidden;
+          transition: 0.5s;
+          padding-top: 60px;
+        }
+        
+        .sidebar a {
+          padding: 8px 8px 8px 32px;
+          text-decoration: none;
+          font-size: 25px;
+          color: #818181;
+          display: block;
+          transition: 0.3s;
+        }
+        
+        .sidebar a:hover {
+          color: #f1f1f1;
+        }
+        
+        .sidebar .closebtn {
+          position: absolute;
+          top: 0;
+          right: 25px;
+          font-size: 36px;
+          margin-left: 50px;
+        }
+        
+        .openbtn {
+          font-size: 20px;
+          cursor: pointer;
+          background-color: #111;
+          color: white;
+          padding: 10px 15px;
+          border: none;
+        }
+        
+        .openbtn:hover {
+          background-color: #444;
+        }
+        
+        #main {
+          transition: margin-left .5s;
+          padding: 16px;
+        }
+        
+        /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+        @media screen and (max-height: 450px) {
+          .sidebar {padding-top: 15px;}
+          .sidebar a {font-size: 18px;}
+        }
+        </style>
+         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  
+</head>
+<body>
+    <div id="main">
+        <button class="openbtn" onclick="openNav()">☰ Open Sidebar</button>  
+        <h2>Collapsed Sidebar</h2>
+        <p>Click on the hamburger menu/bar icon to open the sidebar, and push this content to the right.</p>
+      </div>
+    <nav class="sidebar" id="mySidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <button class="close-menu icon-cancel" title="Fermer le menu"></button>
+        <a href="//www.jacques-cartier.com/" class="logo-wrapper" rel="" title="Tourisme Jacques-Cartier" hreflang="fr">
+          <img src="//www.jacques-cartier.com/css/img/logo.png?1450448688" data-defer="" class="menu-logo" alt="Tourisme Jacques-Cartier" title="Tourisme Jacques-Cartier"></a>
+          <div class="main-container"><div class="menu-group"><h3><a href="//www.jacques-cartier.com/fr/section/quoi-faire/all" data-column="Label" contenteditable="false" rel="" title="Quoi faire ?" hreflang="fr">Quoi faire ?</a></h3>
+            <div class="sub-container">
+              <div class="sub-menu-group">
+                <h4 data-column="Name" contenteditable="false">Plein air en famille</h4>
+                <ul>
+                  <li><a href="//www.jacques-cartier.com/fr/section/quoi-faire/centre-de-plein-air" data-column="Label" contenteditable="false" rel="" title="Centre de plein air" hreflang="fr">Centre de plein air</a></li>
+                  <li><a href="//www.jacques-cartier.com/fr/section/quoi-faire/fatbike" data-column="Label" contenteditable="false" rel="" title="Fatbike" hreflang="fr">Fatbike</a></li>
+                  <li><a href="//www.jacques-cartier.com/fr/section/quoi-faire/glissades-d-hiver-famille" data-column="Label" contenteditable="false" rel="" title="Glissades d'hiver" hreflang="fr">Glissades d'hiver</a></li>
+                  <li><a href="//www.jacques-cartier.com/fr/section/quoi-faire/marche-nordique" data-column="Label" contenteditable="false" rel="" title="Marche nordique" hreflang="fr">Marche nordique</a></li>
+                  <li><a href="//www.jacques-cartier.com/fr/section/quoi-faire/motoneige" data-column="Label" contenteditable="false" rel="" title="Motoneige" hreflang="fr">Motoneige</a></li>
+                  <li><a href="//www.jacques-cartier.com/fr/section/quoi-faire/observation-de-la-faune" data-column="Label" contenteditable="false" rel="" title="Observation de la faune" hreflang="fr">Observation de la faune</a></li>
+                  <li><a href="//www.jacques-cartier.com/fr/section/quoi-faire/parc-aquatique-int-rieur" data-column="Label" contenteditable="false" rel="" title="Parc aquatique intérieur" hreflang="fr">Parc aquatique intérieur</a></li>
+                  <li><a href="//www.jacques-cartier.com/fr/section/quoi-faire/patinage-sur-glace-famille" data-column="Label" contenteditable="false" rel="" title="Patinage sur glace" hreflang="fr">Patinage sur glace</a></li>
+                  <li><a href="//www.jacques-cartier.com/fr/section/quoi-faire/peche-sur-glace" data-column="Label" contenteditable="false" rel="" title="Pêche sur glace" hreflang="fr">Pêche sur glace</a></li>
+                  <li><a href="//www.jacques-cartier.com/fr/section/quoi-faire/raquette" data-column="Label" contenteditable="false" rel="" title="Raquette" hreflang="fr">Raquette</a></li>
+                  <li><a href="//www.jacques-cartier.com/fr/section/quoi-faire/ski-alpin-snowboard" data-column="Label" contenteditable="false" rel="" title="Ski alpin snowboard" hreflang="fr">Ski alpin snowboard</a></li>
+                  <li><a href="//www.jacques-cartier.com/fr/section/quoi-faire/ski-de-randonnee" data-column="Label" contenteditable="false" rel="" title="Ski de fond" hreflang="fr">Ski de fond</a></li>
+                  <li><a href="//www.jacques-cartier.com/fr/section/quoi-faire/survie-en-for-t" data-column="Label" contenteditable="false" rel="" title="Survie en forêt" hreflang="fr">Survie en forêt</a></li>
+                  <li><a href="//www.jacques-cartier.com/fr/section/quoi-faire/traineau-a-chiens" data-column="Label" contenteditable="false" rel="" title="Traineau à chiens" hreflang="fr">Traineau à chiens</a></li>
+                </ul>
+              </div>
+              <div class="sub-menu-group">
+                <h4 data-column="Name" contenteditable="false">Détente</h4>
+                <ul>
+                  <li><a href="//www.jacques-cartier.com/fr/section/quoi-faire/sejour-sante-et-spa" data-column="Label" contenteditable="false" rel="" title="Séjour santé et spa" hreflang="fr">Séjour santé et spa</a>
+                  </li>
+                </ul>
+                </div>
+              </div>
+            </div>
+            <div class="menu-group">
+              <div class="sub-menu-group">
+                <h3><a href="//www.jacques-cartier.com/fr/section/oau-dormir/all" data-column="Label" contenteditable="false" rel="" title="Où dormir ?" hreflang="fr">Où dormir ?</a></h3>
+                <div class="sub-container">
+                  <ul>
+                    <li><a href="//www.jacques-cartier.com/fr/section/oau-dormir/centres-de-vacances-famille" data-column="Label" contenteditable="false" rel="" title="Centre de vacances famille" hreflang="fr">Centre de vacances famille</a></li>
+                    <li><a href="//www.jacques-cartier.com/fr/section/oau-dormir/chalets" data-column="Label" contenteditable="false" rel="" title="Chalets " hreflang="fr">Chalets </a></li>
+                    <li><a href="//www.jacques-cartier.com/fr/section/oau-dormir/g-tes-touristiques" data-column="Label" contenteditable="false" rel="" title="Gîtes touristiques" hreflang="fr">Gîtes touristiques</a></li>
+                    <li><a href="//www.jacques-cartier.com/fr/section/oau-dormir/hotels-et-motels" data-column="Label" contenteditable="false" rel="" title="Hôtels et Motels " hreflang="fr">Hôtels et Motels </a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="sub-menu-group">
+                <h3><a href="//www.jacques-cartier.com/fr/section/oau-manger/all" data-column="Label" contenteditable="false" rel="" title="Où manger ?" hreflang="fr">Où manger ?</a></h3>
+                <div class="sub-container"><ul>
+                  <li><a href="//www.jacques-cartier.com/fr/section/oau-manger/boulangeries-et-chocolateries" data-column="Label" contenteditable="false" rel="" title="Boulangeries et chocolateries " hreflang="fr">Boulangeries et chocolateries </a></li>
+                  <li><a href="//www.jacques-cartier.com/fr/section/oau-manger/cabane-a-sucre" data-column="Label" contenteditable="false" rel="" title="Cabane à sucre" hreflang="fr">Cabane à sucre</a></li>
+                  <li><a href="//www.jacques-cartier.com/fr/section/oau-manger/restaurants" data-column="Label" contenteditable="false" rel="" title="Restaurants" hreflang="fr">Restaurants</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="sub-menu-group">
+              <h3><a href="//www.jacques-cartier.com/fr/section/-v-nements/all" data-column="Label" contenteditable="false" rel="" title="Événements" hreflang="fr">Événements</a></h3>
+                    <div class="sub-container">
+                      <ul>
+                        <li><a href="//www.jacques-cartier.com/fr/section/-v-nements/tous-les-v-nements" data-column="Label" contenteditable="false" rel="" title="Tous les événements" hreflang="fr">Tous les événements</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="menu-group">
+                  <h3><a href="//www.jacques-cartier.com/fr/blogue" data-column="Name" contenteditable="false" rel="" title="Blogue" hreflang="fr">Blogue</a></h3>
+                  <h3><a href="//www.jacques-cartier.com/fr/les-v-nements" data-column="Name" contenteditable="false" rel="" title="Les événements" hreflang="fr">Les événements</a></h3>
+                  <h3><a href="//www.jacques-cartier.com/fr/promotions" data-column="Name" contenteditable="false" rel="" title="Promotions" hreflang="fr">Promotions</a></h3>
+                  <h3><a href="//www.jacques-cartier.com/fr/nous-joindre" data-column="Name" contenteditable="false" rel="" title="Nous joindre" hreflang="fr">Nous joindre</a></h3>
+                  <h3><a href="//www.jacques-cartier.com/fr/a-propos" data-column="Name" contenteditable="false" rel="" title="À propos" hreflang="fr">À propos</a></h3>
+                  <h3><a href="//www.jacques-cartier.com/fr/hors-saison" data-column="Name" contenteditable="false" rel="" title="Quoi faire en été?" hreflang="fr">Quoi faire en été?</a></h3>
+                  <ul class="socials"><li class="lang-link"><a href="javascript:" class="js-switch-lg" data-switch="en" rel="nofollow" title="Switch to English" hreflang="fr">En</a></li>
+                    <li class="profile-link"><a href="//www.jacques-cartier.com/fr/profil" class="icon-user" rel="" title="Profile" hreflang="fr"></a></li>
+                    <li><a href="https://www.facebook.com/TourismeJacquesCartier/" class="icon-fb-new" target="_blank" rel="nofollow noopener noreferrer" title="Facebook" hreflang="fr"></a></li>
+                    <li><a href="https://www.instagram.com/tourismejc/" class="icon-instagram" target="_blank" rel="nofollow noopener noreferrer" title="Instagram" hreflang="fr"></a></li>
+                    <li><a href="https://www.youtube.com/channel/UCw4Fgp6SzZ3AkrOadyVC_Aw/videos" class="icon-youtube" target="_blank" rel="nofollow noopener noreferrer" title="YouTube" hreflang="fr"></a></li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+
+            <script>
+                function openNav() {
+                  document.getElementById("mySidebar").style.width = "100%";
+                  document.getElementById("main").style.marginLeft = "250px";
+                }
+                
+                function closeNav() {
+                  document.getElementById("mySidebar").style.width = "0";
+                  document.getElementById("main").style.marginLeft= "0";
+                }
+                </script>
+</body>
+</html>

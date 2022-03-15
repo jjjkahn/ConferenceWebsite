@@ -1,0 +1,390 @@
+@import '../../../_T_/sass/common.sass'
+
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700;PT+Sans:400,700;Oswald:400,700,300)
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:400,700,500,300)
+
+@mixin transform($data) 
+	-webkit-transform: $data
+	-ms-transform: $data
+	transform: $data
+	
+@mixin mq($size)
+	@media screen and (max-width:$size)
+		@content
+		
+@mixin mq-hide($size)
+	@media screen and (max-width:$size)
+		display: none !important
+
+$work: 'Work Sans', sans-serif
+$ice: #3ABDE9
+$green: #87c45d
+$bold: 700
+$medium: 500
+$darkGray: #444444
+$orange: #f69c31
+$forestGreen: #0f8558
+$light: 300
+
+input
+	border-radius: 0
+	-webkit-appearance: none
+
+.clearfix:before,
+.clearfix:after
+	content: " "
+	display: table
+
+.clearfix:after
+	clear: both
+	
+*
+	padding: 0
+	margin: 0
+	text-decoration: none
+	font-family: $work
+
+	&:focus
+		outline: none
+
+p
+	font-family: 'Lato', sans-serif
+
+$gray: #6f6e68
+
+a
+	border: none
+	color: $gray
+	text-decoration: none
+
+img
+	border: none
+	text-decoration: none
+
+body
+	color: #000
+	overflow-y: scroll
+
+h1, h2, h3, h4, p, input, textarea, select
+	color: $gray
+	
+ul
+	list-style-type: none
+	
+.position-wrapper
+	position: relative
+
+.wrapper
+	margin: 0 auto
+	padding: 0 5%
+	position: relative
+	max-width: 1216px
+	width: 90%
+	z-index: 15
+
+@import 'header'
+@import 'accueil'
+@import 'section'
+@import 'incon'
+@import 'todo'
+@import 'content'
+@import 'footer'
+
+.slider 
+	overflow: hidden
+	width: 100%
+
+	img
+		position: fixed
+		top: 0
+		right: 0
+		//transform: translate(-50%,0)
+		//-webkit-transform: translate(-50%,0)
+		//-ms-transform: translate(-50%,0)
+		
+		
+		@media screen and (max-width: 1000px)
+			right: -45%
+
+.bg-img
+	overflow: hidden
+	width: 100%
+
+	img
+		position: fixed
+		top: 0
+		left: 0
+		z-index: 0
+		width: 100%
+		
+.website-message
+	position: fixed
+	text-align: center
+	z-index: 500
+	bottom: 0
+	left: 50%
+	padding: 25px
+	color: #000
+	font-size: 24px
+	background: #FFF
+	text-transform: uppercase
+	transform: translate(-50%,100%)
+	-webkit-transform: translate(-50%,100%)
+	-ms-transform: translate(-50%,100%)
+	transition: transform 250ms ease
+	-webkit-transition: transform 250ms ease
+	-ms-transition: transform 250ms ease
+	display: block
+	margin: 0 auto
+	-webkit-box-shadow: 0px 0px 13px 1px rgba(50, 50, 50, 0.38)
+	-moz-box-shadow:    0px 0px 13px 1px rgba(50, 50, 50, 0.38)
+	box-shadow:         0px 0px 13px 1px rgba(50, 50, 50, 0.38)
+	
+	@media screen and (max-width: 640px)
+		font-size: 18px
+	
+	span
+		font-size: 42px
+		margin: 0 auto
+		display: none
+		height: 50px
+		width: 50px
+		border: 3px solid #FFF
+		line-height: 50px
+		background: rgba(255,255,255,0.2)
+		border-radius: 50%
+		-moz-border-radius: 50%
+		-webkit-border-radius: 50%
+		margin-bottom: 20px
+		
+		@media screen and (max-width: 640px)
+			font-size: 32px
+			width: 40px
+			height: 40px
+			line-height: 40px
+		
+	
+	&.message-error
+		background: #FFF
+		
+	&.message-success
+		background: #FFF
+		
+	&.move-in
+		transform: translate(-50%,-50px)
+		-webkit-transform: translate(-50%,-50px)
+		-ms-transform: translate(-50%,-50px)
+
+.fixed-seasons
+	position: fixed
+	margin-top: -145px
+	top: 50%
+	right: 0
+	z-index: 50
+	width: 110px
+
+	h1
+		color: #fff
+		font-family: 'PT Sans', sans-serif
+		font-size: 23px
+		font-weight: bold
+		margin-bottom: 10px
+		text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5)
+		text-transform: uppercase
+
+	a
+		background: #000 url(../img/icon-seasons.png) center 5px no-repeat
+		background-color: rgba(0,0,0,0.8)
+		border: 2px solid #fff
+		border-right: none
+		border-top-left-radius: 20px
+		border-bottom-left-radius: 20px
+		color: #fff
+		display: block
+		font-family: 'Lato', sans-serif
+		font-size: 24px
+		font-weight: lighter
+		line-height: 18px
+		text-align: center
+		text-transform: uppercase
+		padding: 125px 0 10px
+		position: absolute
+		right: 0
+		top: 40px
+		width: 110px
+		z-index: 5
+
+		&.current
+			cursor: default
+			padding-top: 125px
+			z-index: 10
+
+			&.hiver
+				padding-top: 130px
+
+		&.not-current
+			padding-top: 195px
+			background-image: none
+
+			&.hiver
+				padding-top: 200px
+
+		&.ete
+
+			span
+				color: #85c140
+				margin-top: 5px
+
+		&.hiver
+			background-position: center -185px
+
+			span
+				color: #408da2
+
+		span
+			display: block
+			font-family: 'PT Sans', sans-serif
+			font-size: 13px
+			font-weight: bold
+			
+.fix-page
+	background: #e2e2e2
+
+	.fix-content
+		background: none
+		@extend .wrapper
+		padding: 75px 0
+		min-height: 500px
+		font-weight: normal
+		
+		a
+			color: $green
+			font-weight: normal
+			
+		p
+			font-weight: normal
+	
+
+body
+			
+	&.activites-attraits
+		background: #8cbb18
+
+		&.Hiver
+			background: #BAC1CA
+
+	&.famille
+
+		background: #e69a16
+
+	&.evenement
+		background: #50b0dc
+
+	&.hebergement
+		background: #016831
+
+	&.restauration
+		background: #242424
+		
+.audio-overlay
+	position: fixed
+	z-index: 5000
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background: rgba(0,0,0,0.8)
+	visibility: hidden
+	opacity: 0
+	@include transition(opacity 500ms ease, visibility 0ms ease 500ms)
+	
+	&.toggle
+		visibility: visible
+		opacity: 1
+		@include transition-delay(0ms)
+	
+	.audio-content
+		position: relative
+		top: 50%
+		left: 50%
+		@include transform(translate(-50%,-50%))
+		width: 500px
+		background: $green
+		text-align: center
+		
+		button
+			position: absolute
+			top: 10px
+			right: 10px
+			width: 20px
+			height: 20px
+			text-align: left
+			text-indent: -9999px
+			border: none
+			background: none
+			
+			span
+				display: block
+				position: relative
+				width: 20px
+				height: 20px
+			
+				&:after,&:before
+					content: ''
+					position: absolute
+					top: 7px
+					left: 0
+					width: 20px
+					height: 5px
+					background: #FFF
+					
+				&:after
+					@include transform(rotate(-45deg))
+					
+				&:before
+					@include transform(rotate(45deg))
+		
+		&.Hiver
+			background: $ice
+		
+		div
+			padding: 60px 20px 30px 20px
+		
+			img, p
+				display: inline-block
+				vertical-align: middle
+		
+			p 
+				color: #FFF
+				text-transform: uppercase
+				font-weight: bold
+				font-size: 32px
+				margin-left: 30px
+				margin-bottom: 0
+				line-height: 100%
+				min-height: 0
+				
+		a
+			display: inline-block
+			margin-top: 20px
+			color: #FFF
+			
+			&:nth-of-type(2):before
+				content: '|'
+				display: inline-block
+				vertical-align: top
+				margin: 0 5px
+				
+				
+		audio
+			padding: 0
+			margin: 0
+			width: 100%
+			position: relative
+			bottom: -4px
+	
+	
+	
+	
+	
+	
